@@ -1,0 +1,127 @@
+fn main() {
+    /*let i = 10i32;
+    let max = 5i32;
+
+    if i<max {
+        println!("i est inférieur à max");
+    }
+    else {
+        println!("i est supérieure à max");
+    }
+
+    let tab = [0, 8, 2]; // tab est un tableau contenant 0, 1 et 2
+    let s = &tab; // s est une slice "pointant" sur tab
+
+        println!("{:?}", s);  // ça affichera "[0, 1, 2]"
+        //println!("{:?}", tab)
+
+    let s = &tab[1..]; // s est maintenant une slice commençant à partir du 2e élément de tab
+        println!("{:?}", s); // ça affichera "[1, 2]"
+
+    let mut v : Vec<u32> = Vec::new();
+
+    v.push(2);
+    v.push(5);
+    v.push(10);
+    v.push(9);
+
+    let t = &v;
+    println!("{:?}", t);
+    let t = &v[1..];
+    println!("{:?}", t); 
+    */
+
+    /*
+    let age = 17i32;
+
+    if age <= 18 {
+        println!("mineur");
+    }
+    else {
+        println!("majeur");
+    }
+    */
+
+    /*
+    let my_string = "ho";
+
+    match my_string {
+    "bonjour" => {
+        println!("francais");
+    }
+    "ciao" => {
+        println!("italien");
+    }
+    "hello" => {
+        println!("anglais");
+    }
+    "hola" => {
+        println!("espagnol");
+    }
+    _ => {
+        println!("je ne connais pas cette langue...");
+    }
+    */
+
+    /*
+    let age : i32 = 18;
+
+    match age {
+        17 => {
+            println!("mineur !");
+        }
+        18 => {
+            println!("majeur !");
+        }
+        _ => {
+            println!("ni 17, ni 18 !");
+        }
+    }
+    */
+
+    
+    /*
+    let age = 16i32;
+
+    match age {
+        tmp if tmp < 18 => {
+            println!("mineur");
+        }
+        _ => {
+            println!("majeur");
+        }
+    }
+    */
+
+    /*
+    //matcher directement sur un ensemble de valeurs
+    let i = 15i32;
+
+    match i {
+    10...100 => println!("La variable est entre 10 et 100 (inclus)"),
+    x => println!("{} n'est pas entre 10 et 100 (inclus)", x)
+    };
+
+    //À noter, dans le cas d'un for i in 10..100 { println!("{}", i); }, i prendra une valeur allant de 10 à 99 inclus.
+    //Pratique ! Vous pouvez aussi « binder » (ou matcher sur un ensemble de valeurs) la variable avec le symbole « @ » 
+
+    match i {
+        x @ 10...100 => println!("{} est entre 9 et 101", x),
+        x => println!("{} n'est pas entre 9 et 101", x)
+    };
+    */
+
+    let une_variable = "Piment";
+
+    match une_variable {
+        "jambon" | "poisson" | "oeuf" => println!("Des protéines !"),
+        "bonbon" => println!("Des bonbons !"),
+        "salade" | "épinards" | "fenouil" => println!("Beurk ! Des légumes !"),
+        _ => println!("ça, je sais pas ce que c'est...")
+    }
+
+}
+
+
+
+
