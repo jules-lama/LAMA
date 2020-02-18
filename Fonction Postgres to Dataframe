@@ -1,0 +1,47 @@
+import pandas as pd
+from pyspark.context import SparkContext
+from sqlalchemy import create_engine
+from pyspark.context import SparkConf
+
+
+conf = SparkConf().setMaster("local").setAppName("b4star").set("spark.executor.memory", "2g")
+sc = SparkContext(conf)
+
+spark = sc.spark_session()
+
+
+DATABASE = {
+    'b4dbPost':{
+        'NAME': 'b4db',
+        'USER': 'postgres',
+        'PASSWORD': 'fabfab91',
+        'HOST': 'b4db-stg.cqhue3uoeaeg.eu-central-1.rds.amazonaws.com',
+        'PORT': 5432,
+    },
+}
+
+# choosing of the database to use
+db = DATABASE['b4dbPost']
+
+# construct an engine connection string
+engine_string = "postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}".format(
+    user=db['USER'],
+    password=db['PASSWORD'],
+    host=db['HOST'],
+    port=db['PORT'],
+    database=db['NAME'],
+)
+
+# create sqlalchemy engine
+engine = create_engine(engine_string)
+
+# read a table from database into pandas dataframe, replace "tablename" with your table name
+df = pd.read_sql_table('post', engine)
+
+"""
+dataframe = psql.DataFrame("SELECT * FROM post", connection)
+
+df = pd.read_sql_query("SELECT * FROM post", con=connection)
+"""
+
+print(df)
