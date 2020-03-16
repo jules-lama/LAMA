@@ -16,12 +16,12 @@ object DataFrame1 {
       .option("url", "jdbc:postgresql://b4db-stg.cqhue3uoeaeg.eu-central-1.rds.amazonaws.com:5432/b4db")
       .option("dbtable", "public.post")
       .option("user", "postgres")
-      .option("password", "fabfab91")
+      .option("password", "*******")
       .load()
 
     //val connectionProperties = new Properties()
     //connectionProperties.put("user", "postgres")
-    //connectionProperties.put("password", "fabfab91")
+    //connectionProperties.put("password", "********")
     //val jdbcDF2 = spark.read
     //  .jdbc("jdbc:postgresql://b4db-stg.cqhue3uoeaeg.eu-central-1.rds.amazonaws.com:5432/b4db", "public.post", connectionProperties)
 
@@ -32,7 +32,7 @@ object DataFrame1 {
     //  .option("url", "jdbc:postgresql://b4db-stg.cqhue3uoeaeg.eu-central-1.rds.amazonaws.com:5432/b4db")
     //  .option("dbtable", "public.post")
     //  .option("user", "postgres")
-    //  .option("password", "fabfab91")
+    //  .option("password", "********")
     //  .save()
 
     //jdbcDF2.write
