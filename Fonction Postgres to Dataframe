@@ -14,7 +14,7 @@ DATABASE = {
     'b4dbPost':{
         'NAME': 'b4db',
         'USER': 'postgres',
-        'PASSWORD': 'fabfab91',
+        'PASSWORD': '*******',
         'HOST': 'b4db-stg.cqhue3uoeaeg.eu-central-1.rds.amazonaws.com',
         'PORT': 5432,
     },
